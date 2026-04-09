@@ -4,6 +4,17 @@
 .article-inner
   @extend $block
   overflow: hidden
+  position: relative
+  &:before
+    content: ""
+    position: absolute
+    top: 18px
+    right: 18px
+    width: 14px
+    height: 14px
+    border-radius: 50%
+    background: rgba(180, 35, 47, 0.75)
+    box-shadow: 0 0 0 6px rgba(180,35,47,0.07)
 
 .article-meta
   clearfix()
@@ -30,11 +41,12 @@
 
 .article-title
   text-decoration: none
-  font-size: 2em
+  font-size: 2.05em
   font-weight: bold
   color: color-default
   line-height: line-height-title
   transition: color 0.2s
+  font-family: font-serif
   a&:hover
     color: color-link
 
@@ -51,6 +63,12 @@
   h1, h2, h3, h4, h5, h6
     line-height: line-height-title
     margin: line-height-title 0
+    font-family: font-serif
+  h2
+    padding-left: 14px
+    border-left: 4px solid rgba(180,35,47,0.7)
+  h3
+    color: #7d1521
   a
     color: color-link
     text-decoration: none

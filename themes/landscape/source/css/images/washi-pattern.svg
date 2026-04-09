@@ -1,0 +1,18 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="240" fill="#FFF7F5"/>
+  <g opacity="0.4">
+    <path d="M40 30L60 50L40 70L20 50L40 30Z" stroke="#E9C2BE"/>
+    <path d="M120 20L140 40L120 60L100 40L120 20Z" stroke="#E9C2BE"/>
+    <path d="M200 30L220 50L200 70L180 50L200 30Z" stroke="#E9C2BE"/>
+    <path d="M80 90L100 110L80 130L60 110L80 90Z" stroke="#E9C2BE"/>
+    <path d="M160 100L180 120L160 140L140 120L160 100Z" stroke="#E9C2BE"/>
+    <path d="M40 150L60 170L40 190L20 170L40 150Z" stroke="#E9C2BE"/>
+    <path d="M120 160L140 180L120 200L100 180L120 160Z" stroke="#E9C2BE"/>
+    <path d="M200 150L220 170L200 190L180 170L200 150Z" stroke="#E9C2BE"/>
+  </g>
+  <g opacity="0.2">
+    <circle cx="36" cy="106" r="3" fill="#D94752"/>
+    <circle cx="156" cy="56" r="3" fill="#D94752"/>
+    <circle cx="188" cy="206" r="3" fill="#D94752"/>
+  </g>
+</svg>

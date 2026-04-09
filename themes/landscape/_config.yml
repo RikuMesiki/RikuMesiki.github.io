@@ -3,14 +3,15 @@
 # ===============
 # Navigation menu
 menu:
-  Home: /
-  Archives: /archives
+  首页: /
+  归档: /archives
+  关于: /about
 # RSS link
 rss: /atom.xml
 # Path of title banner image of page top
 banner: "images/red-banner.svg"
 # Subtitle of page top
-subtitle: figure218's notes
+subtitle: red and white notes
 # Header links with icon, specified links will appear at the top right corner of the page
 # Each name must correspond to the icon name of Fork Awesome
 # https://forkaweso.me/Fork-Awesome/icons/

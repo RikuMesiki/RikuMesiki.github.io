@@ -2,6 +2,7 @@
   height: banner-height
   position: relative
   border-bottom: 1px solid rgba(180, 35, 47, 0.12)
+  overflow: hidden
   &:before, &:after
     content: ""
     position: absolute
@@ -14,6 +15,26 @@
   &:after
     bottom: 0
     background: linear-gradient(transparent, rgba(120, 0, 15, 0.12))
+
+  .sun-disc
+    display: none
+
+#header-outer:after
+  content: ""
+  position: absolute
+  width: 260px
+  height: 260px
+  border-radius: 50%
+  top: 42px
+  right: 12%
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.65), rgba(255,255,255,0.05) 32%, rgba(217,71,82,0.92) 33%, rgba(180,35,47,0.95) 68%, rgba(130,12,25,0.95) 100%)
+  box-shadow: 0 24px 60px rgba(180, 35, 47, 0.16)
+  z-index: -1
+  @media mq-mobile
+    width: 180px
+    height: 180px
+    top: 70px
+    right: -30px
 
 #header-outer
   height: 100%
@@ -34,14 +55,37 @@
   background-position: center
   background-size: cover
   z-index: -1
+  &:before
+    content: ""
+    position: absolute
+    inset: 0
+    background: linear-gradient(90deg, rgba(255,252,251,0.94) 0%, rgba(255,247,244,0.82) 35%, rgba(255,245,242,0.3) 62%, rgba(255,245,242,0) 100%)
+  &:after
+    content: ""
+    position: absolute
+    left: 10%
+    bottom: 44px
+    width: 220px
+    height: 2px
+    background: linear-gradient(90deg, rgba(180,35,47,0.45), rgba(180,35,47,0))
+    box-shadow: 0 -14px 0 rgba(180,35,47,0.09), 0 14px 0 rgba(180,35,47,0.09)
+    @media mq-mobile
+      width: 120px
 
 #header-title
-  text-align: center
+  text-align: left
   height: logo-size
   position: absolute
   top: 50%
   left: 0
   margin-top: logo-size * -0.5
+  width: 100%
+  max-width: 520px
+  padding-left: 8%
+  box-sizing: border-box
+  @media mq-mobile
+    padding-left: 24px
+    max-width: calc(100% - 36px)
 
 $logo-text
   text-decoration: none
@@ -54,15 +98,28 @@ $logo-text
   font-size: logo-size
   line-height: logo-size
   letter-spacing: 3px
+  font-family: font-serif
+  &:before
+    content: ""
+    display: inline-block
+    width: 14px
+    height: 14px
+    border-radius: 50%
+    background: #b4232f
+    margin-right: 12px
+    vertical-align: middle
+    box-shadow: 0 0 0 7px rgba(180,35,47,0.08)
 
 #subtitle
   @extend $logo-text
   font-size: subtitle-size
   line-height: subtitle-size
-  letter-spacing: 1px
+  letter-spacing: 0.28em
+  color: #9e4d54
+  text-transform: uppercase
 
 #subtitle-wrap
-  margin-top: subtitle-size
+  margin-top: 18px
 
 #main-nav
   float: left
@@ -79,6 +136,7 @@ $nav-link
   padding: 20px 15px
   &:hover
     opacity: 1
+    color: color-link
 
 .nav-icon
   @extend $nav-link
@@ -93,7 +151,12 @@ $nav-link
 .main-nav-link
   @extend $nav-link
   font-weight: 600
-  letter-spacing: 1px
+  letter-spacing: 0.12em
+  margin-top: 10px
+  border-radius: 999px
+  padding: 10px 16px
+  background: rgba(255,255,255,0.3)
+  border: 1px solid rgba(180,35,47,0.08)
   @media mq-mobile
     display: none
 
