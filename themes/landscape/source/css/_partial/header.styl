@@ -1,7 +1,7 @@
 #header
   height: banner-height
   position: relative
-  border-bottom: 1px solid rgba(180, 35, 47, 0.12)
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08)
   overflow: hidden
   &:before, &:after
     content: ""
@@ -11,30 +11,49 @@
     height: 90px
   &:before
     top: 0
-    background: linear-gradient(rgba(120, 0, 15, 0.14), transparent)
+    background: linear-gradient(rgba(0, 0, 0, 0.08), transparent)
   &:after
     bottom: 0
-    background: linear-gradient(transparent, rgba(120, 0, 15, 0.12))
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.06))
 
-  .sun-disc
-    display: none
+.hero-cut
+  position: absolute
+  background: #141015
+  opacity: 0.96
+  z-index: 0
+
+.hero-cut-a
+  width: 36vw
+  max-width: 560px
+  height: 90px
+  left: -6vw
+  top: 34px
+  transform: rotate(-8deg)
+
+.hero-cut-b
+  width: 45vw
+  max-width: 720px
+  height: 56px
+  right: -8vw
+  bottom: 58px
+  transform: rotate(-7deg)
 
 #header-outer:after
   content: ""
   position: absolute
-  width: 260px
-  height: 260px
+  width: 300px
+  height: 300px
   border-radius: 50%
-  top: 42px
-  right: 12%
-  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.65), rgba(255,255,255,0.05) 32%, rgba(217,71,82,0.92) 33%, rgba(180,35,47,0.95) 68%, rgba(130,12,25,0.95) 100%)
-  box-shadow: 0 24px 60px rgba(180, 35, 47, 0.16)
+  top: 56px
+  right: 8%
+  background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.72), rgba(255,255,255,0.08) 22%, rgba(234,79,105,0.98) 24%, rgba(209,31,70,0.98) 70%, rgba(132,9,35,0.98) 100%)
+  box-shadow: 0 28px 80px rgba(209, 31, 70, 0.2)
   z-index: -1
   @media mq-mobile
     width: 180px
     height: 180px
-    top: 70px
-    right: -30px
+    top: 110px
+    right: -26px
 
 #header-outer
   height: 100%
@@ -50,8 +69,8 @@
   left: 0
   width: 100%
   height: 100%
-  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.08)), url(banner-url)
-  background-color: #fff5f2
+  background-image: linear-gradient(125deg, rgba(255,255,255,0.92), rgba(255,255,255,0.18)), url(banner-url)
+  background-color: #fbf6f2
   background-position: center
   background-size: cover
   z-index: -1
@@ -59,16 +78,16 @@
     content: ""
     position: absolute
     inset: 0
-    background: linear-gradient(90deg, rgba(255,252,251,0.94) 0%, rgba(255,247,244,0.82) 35%, rgba(255,245,242,0.3) 62%, rgba(255,245,242,0) 100%)
+    background: linear-gradient(90deg, rgba(252,249,247,0.98) 0%, rgba(252,249,247,0.92) 36%, rgba(252,249,247,0.28) 64%, rgba(252,249,247,0) 100%)
   &:after
     content: ""
     position: absolute
     left: 10%
-    bottom: 44px
-    width: 220px
-    height: 2px
-    background: linear-gradient(90deg, rgba(180,35,47,0.45), rgba(180,35,47,0))
-    box-shadow: 0 -14px 0 rgba(180,35,47,0.09), 0 14px 0 rgba(180,35,47,0.09)
+    bottom: 56px
+    width: 260px
+    height: 3px
+    background: linear-gradient(90deg, rgba(22,18,23,0.82), rgba(22,18,23,0))
+    box-shadow: 0 -16px 0 rgba(209,31,70,0.18), 0 16px 0 rgba(22,18,23,0.1)
     @media mq-mobile
       width: 120px
 
@@ -80,46 +99,78 @@
   left: 0
   margin-top: logo-size * -0.5
   width: 100%
-  max-width: 520px
-  padding-left: 8%
+  max-width: 620px
+  padding-left: 7%
   box-sizing: border-box
   @media mq-mobile
     padding-left: 24px
     max-width: calc(100% - 36px)
 
+#hero-labels
+  display: flex
+  gap: 10px
+  margin-bottom: 18px
+  flex-wrap: wrap
+
+.hero-label
+  display: inline-block
+  padding: 6px 10px
+  background: #141015
+  color: #fff8f4
+  font-size: 10px
+  font-weight: 700
+  letter-spacing: 0.3em
+  text-transform: uppercase
+
 $logo-text
   text-decoration: none
-  color: #7d1521
-  font-weight: 300
-  text-shadow: 0 8px 24px rgba(255, 255, 255, 0.65)
+  color: #121015
+  font-weight: 700
+  text-shadow: 0 12px 32px rgba(255, 255, 255, 0.78)
 
 #logo
   @extend $logo-text
   font-size: logo-size
-  line-height: logo-size
-  letter-spacing: 3px
+  line-height: 1
+  letter-spacing: 0.06em
   font-family: font-serif
   &:before
     content: ""
     display: inline-block
-    width: 14px
-    height: 14px
-    border-radius: 50%
-    background: #b4232f
-    margin-right: 12px
-    vertical-align: middle
-    box-shadow: 0 0 0 7px rgba(180,35,47,0.08)
+    width: 18px
+    height: 18px
+    background: #d11f46
+    margin-right: 14px
+    vertical-align: 0.12em
+    box-shadow: 10px 10px 0 #141015
+  @media mq-mobile
+    font-size: 42px
 
 #subtitle
   @extend $logo-text
   font-size: subtitle-size
   line-height: subtitle-size
-  letter-spacing: 0.28em
-  color: #9e4d54
+  letter-spacing: 0.42em
+  color: #7f6d72
   text-transform: uppercase
 
 #subtitle-wrap
   margin-top: 18px
+
+#hero-vertical
+  position: absolute
+  right: -58px
+  top: 10px
+  font-size: 108px
+  font-weight: 900
+  color: rgba(20,16,21,0.08)
+  letter-spacing: 0.1em
+  writing-mode: vertical-rl
+  text-orientation: mixed
+  line-height: 0.84
+  user-select: none
+  @media mq-mobile
+    display: none
 
 #main-nav
   float: left
@@ -127,16 +178,16 @@ $logo-text
 
 $nav-link
   float: left
-  color: #8c1b26
+  color: #f8efea
   opacity: 0.8
   text-decoration: none
-  text-shadow: 0 1px rgba(255, 255, 255, 0.6)
+  text-shadow: none
   transition: opacity 0.2s
   display: block
-  padding: 20px 15px
+  padding: 14px 15px
   &:hover
     opacity: 1
-    color: color-link
+    color: #fff
 
 .nav-icon
   @extend $nav-link
@@ -152,11 +203,11 @@ $nav-link
   @extend $nav-link
   font-weight: 600
   letter-spacing: 0.12em
-  margin-top: 10px
-  border-radius: 999px
-  padding: 10px 16px
-  background: rgba(255,255,255,0.3)
-  border: 1px solid rgba(180,35,47,0.08)
+  margin-top: 12px
+  margin-right: 6px
+  padding: 10px 14px
+  background: #141015
+  border-left: 4px solid #d11f46
   @media mq-mobile
     display: none
 
@@ -168,6 +219,7 @@ $nav-link
 #sub-nav
   float: right
   margin-right: -15px
+  margin-top: 8px
 
 #search-form-wrap
   position: absolute
@@ -191,8 +243,8 @@ $nav-link
   right: 0
   background: #fff
   padding: 5px 15px
-  border-radius: 999px
-  box-shadow: 0 14px 30px rgba(149, 32, 44, 0.12)
+  border-radius: 0
+  box-shadow: 0 18px 40px rgba(20, 16, 21, 0.08)
 
 .search-form-input
   border: none

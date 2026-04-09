@@ -1,7 +1,13 @@
 <header id="header">
   <div id="banner"></div>
+  <div class="hero-cut hero-cut-a"></div>
+  <div class="hero-cut hero-cut-b"></div>
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
+      <div id="hero-labels">
+        <span class="hero-label">SCENE 01</span>
+        <span class="hero-label">MONOLOGUE MODE</span>
+      </div>
       <h1 id="logo-wrap">
         <a href="<%- url_for() %>" id="logo"><%= config.title %></a>
       </h1>
@@ -10,6 +16,7 @@
           <a href="<%- url_for() %>" id="subtitle"><%= theme.subtitle || config.subtitle %></a>
         </h2>
       <% } %>
+      <div id="hero-vertical">BLOG</div>
     </div>
     <div id="header-inner" class="inner">
       <nav id="main-nav">
