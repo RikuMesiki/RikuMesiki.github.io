@@ -77,6 +77,18 @@ fb_app_id:
 # ===============
 # Disqus comment system.
 disqus_shortname:
+# Waline comment system. https://waline.js.org
+waline:
+  enable: false
+  serverURL:
+  lang: zh-CN
+  emoji:
+  pageview: true
+  comment: true
+  reaction: true
+  search: false
+  locale:
+    reactionTitle: 点赞
 # valine comment system. https://valine.js.org
 valine:
   enable: false # if you want use valine,please set this value is true

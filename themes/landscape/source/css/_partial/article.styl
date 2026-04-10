@@ -155,6 +155,29 @@
       height: 100%
       margin-top: 0
 
+.article-stats
+  display: flex
+  gap: 18px
+  align-items: center
+  padding: 0 article-padding 16px
+  color: color-grey
+  font-size: 0.9em
+  letter-spacing: 0.08em
+  text-transform: uppercase
+
+.article-stat
+  display: inline-flex
+  gap: 6px
+  align-items: center
+  padding: 7px 10px
+  background: rgba(20,16,21,0.04)
+  border-left: 3px solid #d11f46
+
+#comments
+  margin: block-margin 0
+  @media mq-mobile
+    margin: 30px 0
+
 .article-more-link a
   display: inline-block
   line-height: 1em
