@@ -85,10 +85,12 @@ waline:
   emoji:
   pageview: true
   comment: true
-  reaction: true
+  reaction:
+    - /images/waline-like.svg
   search: false
   locale:
     reactionTitle: 点赞
+    reaction0: 点赞
 # valine comment system. https://valine.js.org
 valine:
   enable: false # if you want use valine,please set this value is true

@@ -33,7 +33,7 @@
       lang: '<%= theme.waline.lang || "zh-CN" %>',
       pageview: <%= theme.waline.pageview ? 'true' : 'false' %>,
       comment: <%= theme.waline.comment ? 'true' : 'false' %>,
-      reaction: <%= theme.waline.reaction ? 'true' : 'false' %>,
+      reaction: <%- JSON.stringify(theme.waline.reaction || false) %>,
       search: <%= theme.waline.search ? 'true' : 'false' %>,
       <% if (theme.waline.emoji) { %>
       emoji: <%- JSON.stringify(theme.waline.emoji) %>,
