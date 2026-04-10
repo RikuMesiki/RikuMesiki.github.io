@@ -79,8 +79,8 @@ fb_app_id:
 disqus_shortname:
 # Waline comment system. https://waline.js.org
 waline:
-  enable: false
-  serverURL:
+  enable: true
+  serverURL: https://218sblog.vercel.app
   lang: zh-CN
   emoji:
   pageview: true
